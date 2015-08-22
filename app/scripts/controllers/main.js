@@ -8,10 +8,13 @@
  * Controller of the superbApp
  */
 angular.module('superbApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($scope, $http) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+    $scope.showAlertMessage = function(msg) {
+		alert(msg);
+	};
   });
